@@ -1,0 +1,4 @@
+servicecomb:
+  service:
+    name: SERVICECENTER
+    version: 2.1.0

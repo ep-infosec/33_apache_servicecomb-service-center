@@ -1,0 +1,42 @@
+{
+  "name": "demo-mark",
+  "id": "xxx",
+  "status": "enabled",
+  "createTime": "123",
+  "updateTime": "123",
+  "selector": {
+    "app": "xx",
+    "environment": "xx"
+  },
+  "spec": {
+    "services": "ser1:1.0,ser2:2.0,ser3",
+    "matches": [
+      {
+        "name": "match1",
+        "headers": {
+          "X-User": {
+            "regex": "ja.*"
+          }
+        },
+        "apiPath": {
+          "exact": "/metrics"
+        },
+        "methods": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "name": "match2",
+        "apiPath": {
+          "exact": "/health"
+        },
+        "methods": [
+          "GET",
+          "POST"
+        ]
+      }
+    ]
+  }
+}
+
